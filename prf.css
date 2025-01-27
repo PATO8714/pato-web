@@ -1,0 +1,145 @@
+/* تصميم عام للجسم */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: rgb(255, 250, 250);
+    overflow: hidden;
+  }
+  
+  /* تصميم شاشة الترحيب */
+  #welcome-screen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url(1315627\ \(2\).png);
+  }
+  
+  .enter-text {
+    font-size: 2em;
+    cursor: pointer;
+    color: rgb(19, 18, 19);
+  }
+  
+  /* تصميم الفيديو */
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* يغطي الشاشة بالكامل */
+    height: 100%; /* يغطي الشاشة بالكامل */
+    object-fit: cover; /* لضمان تغطية الشاشة بشكل كامل */
+    z-index: -1; /* وضع الفيديو في الخلف */
+    display: none; /* الفيديو مخفي في البداية */
+  }
+  
+  /* تصميم زر التشغيل الاحترافي */
+  .button-container {
+    position: absolute;
+    top: 20px; /* وضع الزر في أعلى الصفحة */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* إخفاء الزر في البداية */
+  }
+  
+  .play-button {
+    background-color: transparent; /* خلفية شفافة */
+    color: #fff; /* النص أبيض */
+    padding: 20px 40px; /* حجم أكبر للزر */
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid transparent; /* حدود شفافة */
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase; /* تحويل النص إلى حروف كبيرة */
+    box-sizing: border-box; /* التأكد من أن الحدود لا تؤثر على حجم الزر */
+    z-index: 1; /* وضع الزر فوق المحتوى ولكن تحت الفيديو */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* عند التحويم على الزر */
+  .play-button:hover {
+    opacity: 0.8; /* تغيير الشفافية عند التحويم */
+    transform: scale(1.05); /* تكبير الزر عند التحويم */
+  }
+  
+  /* عند الضغط على الزر */
+  .play-button:active {
+    opacity: 0; /* الزر يختفي تمامًا عند الضغط */
+    transform: scale(0.95); /* تصغير الزر عند الضغط عليه */
+  }
+  
+  .play-button:focus {
+    outline: none;
+  }
+  
+  /* تصميم بطاقة التعريف */
+  #profile-card {
+    display: none;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card {
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .profile-picture {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .name {
+    font-size: 1.5em;
+    color: #ff00ff;
+  }
+  
+  .status {
+    margin-top: 10px;
+    font-size: 1.2em;
+  }
+  
+  .viewer-count {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #ccc;
+  }
+/* تخصيص تنسيق النصوص الجديدة */
+.additional-text {
+    margin-bottom: 20px; /* المسافة بين النصوص الجديدة والنص "Love y'all" */
+    display: flex;
+    gap: 22px;
+  }
+  /* إزالة السطور تحت الروابط */
+.lien {
+    color: rgb(74, 7, 60);  /* اللون الأسود للنص */
+    text-decoration: none;  /* إزالة السطر تحت الرابط */
+    font-weight: bold;  /* جعل النص غامق */
+    transition: all 0.3s ease;  /* إضافة تأثير عند التغيير */
+    padding: 5px 10px;  /* إضافة مسافة حول النص */
+  }
+  
+  .lien:hover {
+    color: gray;  /* تغيير اللون إلى الرمادي عند المرور فوق الرابط */
+    border: 1px solid gray;  /* إضافة حدود صغيرة */
+    border-radius: 5px;  /* جعل الحواف مدورة */
+  }
+  
+  /* عندما يتم الضغط على الرابط */
+  .lien:active {
+    color: gray;  /* اللون الرمادي عند الضغط */
+    border: 1px solid gray;  /* نفس الحدود عند الضغط */
+    background-color: #f0f0f0;  /* خلفية خفيفة عند الضغط */
+  }
+  
+ 
